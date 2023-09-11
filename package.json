@@ -4,6 +4,7 @@
     "description": "An alternative module to @nuxtjs/auth",
     "homepage": "https://github.com/nuxt-alt/auth",
     "author": "Denoder",
+    "packageManager": "yarn@1.22.19",
     "keywords": [
         "nuxt",
         "nuxtjs",
