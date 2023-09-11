@@ -150,10 +150,10 @@ export function setH3Cookie(event: H3Event, serializedCookie: string) {
     cookies.unshift(serializedCookie);
 
     event.node.res.setHeader('Set-Cookie', cookies.filter(
-        (value, index, items) => items.findIndex( 
-            (val) => val.startsWith(value.slice(0, value.indexOf('='))) 
+        (value, index, items) => items.findIndex(
+            (val) => val.startsWith(value.slice(0, value.indexOf('=')))
         ) === index
     ));
 }
 
-export const hasOwn = <O extends object, K extends PropertyKey>(object: O, key: K) => Object.hasOwn ? Object.hasOwn(object, key) : Object.prototype.hasOwnProperty.call(object, key);
+export const hasOwn = <O extends object, K extends PropertyKey>(object: O, key: K) => Object.prototype.hasOwnProperty?.call(object, key) ?? Object.hasOwn(object, key);
